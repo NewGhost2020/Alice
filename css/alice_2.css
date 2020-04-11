@@ -1,0 +1,196 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background: url("../img/back-fon.jpg");
+    background-size: cover;
+    height: 100vh;
+	min-height: 700px;
+    position: relative;  
+    background-position: center center;      
+    background-repeat: no-repeat; 
+    overflow: hidden;
+}
+img {
+    width: 90%;
+    height: auto;
+    box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.25);
+}
+.desk-title {
+    width: 35%;
+    height: auto;
+    border: 2px solid #1019E4;
+    margin: 20px auto;
+    background-color: #D5FEFB;
+    box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+.row-top {
+    margin-top: 3%;
+}
+.row-down {
+    margin-top: 30%;
+}
+.block-cards {
+    margin-left: 50px;
+}
+.block-button {
+    margin-right: 100px;
+    margin-top: 10px;
+}
+.btn {
+    background-color: #8DCFDE;
+    border: 1px solid #FC3C2F;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    margin: 5px;
+    box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.25);
+    font-weight: bold;
+    text-transform: uppercase;    
+}
+.btn:hover {
+    color: #fff;
+    background-color: #849fb9;
+}
+.wrap-card {
+    perspective: 1000px;
+    -ms-perspective: 1000px;
+    position: relative;
+}
+.front, .back {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transform-origin: center center;
+    width: 100%;
+}
+.back {
+    transform: rotateY(180deg); 
+}
+    
+.card {
+    transform-style: preserve-3d;
+    position: relative;
+    transition-duration: 1.5s;
+    -moz-transition-duration: 1.5s;
+}
+.show {
+    transform: rotateY(180deg);    
+    cursor: pointer;
+    transform-origin: center center;
+    -moz-transform-origin: center center;
+} 
+.show-fix {
+    transform: rotateY(180deg);    
+    cursor: pointer;
+    transform-origin: center center;
+    -moz-transform-origin: center center;
+} 
+.animated {
+    -webkit-transition: all 3s;
+    -o-transition: all 3s;
+    transition: all 3s;
+}
+.fin-screen {
+    width: 90%;
+    height: 79%;
+    top: 11%;
+    left: 3%;
+    position: absolute;
+    z-index: 10;
+    border: 1px solid #000;
+    border-radius: 20px;
+    box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.25);
+    background: url("../img/back-fon.jpg");
+    background-size: cover;
+    background-position: center center;      
+    background-repeat: no-repeat; 
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+}
+.title h2 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #FC3C2F;
+    text-align: center;
+    margin-top: 10px;
+}
+#img-caterpillar {
+    width: 17%;
+    margin-left: 50%;
+    margin-top: 10px;
+    transform: translate(-50%);
+    box-shadow: 2px 6px 17px rgba(0, 0, 0, 0.25);
+}
+#return, #next {
+    position: relative;
+    width: 15%;
+    box-shadow: 2px 6px 17px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+}
+#return:hover, #next:hover {
+    box-shadow: 0 0 0;
+    border: 1px solid #21adeb;
+}
+#return {
+    right: 54%;
+    top: 45%;
+}
+#next {
+    left: -10%;
+}
+#fin-cat {
+    position: absolute;
+    width: 80%;
+    z-index: 5;
+    top: -60%;
+    left: 0;
+    opacity: 0;
+    box-shadow: 0 0 0;
+    transform: scale(0);
+}
+#test {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: #fff;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+/* ============================media========================== */
+@media only screen and (max-width : 992px) {
+h2 {
+    font-size: 1.75rem;
+}
+.btn {
+    width: 120px;
+    height: 30px;
+    font-size: 13px;
+    margin: 3px;
+}
+.block-button {
+    margin-top: 0;
+    margin-right: 50px;
+}
+@media only screen and (max-width : 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    .btn {
+        width: 100px;
+        height: 26px;
+        font-size: 10px;
+    }
+}
+
+
+}
