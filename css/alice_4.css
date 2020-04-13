@@ -39,10 +39,6 @@ width: 30px;
 height: 30px;
 border: 1px solid blue;
 }
-.block-button {
-    margin-right: 100px;
-    margin-top: 10px;
-}
 .wrap-card {
     perspective: 1000px;
     -ms-perspective: 1000px;
@@ -89,11 +85,11 @@ border: 1px solid blue;
     transition: all 3s;
 }
 #try-cake {
-width: 200px;
-height: 200px;
-border: 2px double blue;
-box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.25);
-cursor: pointer;
+    width: 200px;
+    height: 200px;
+    border: 2px double blue;
+    box-shadow: 10px 15px 8px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
 }
 #try-cake:hover {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.25);
@@ -167,11 +163,17 @@ cursor: pointer;
     top: 10px;
 }
 /* ---------------------------------------Word---------------- */
-.world-block {
-    width: 300px;
+.words-block {
+    /* width: 500px;
     height: 100px;
+    right: 50px; */
+    position: relative;
 }
-input.queen {
+[class^='word-'] {
+    position: absolute;
+    display: none;
+}
+.words-block input {
     width: 40px;
     height: 40px;
     border: 1px solid black;
@@ -179,45 +181,40 @@ input.queen {
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
-    text-align: center;
+    text-align: center;  
+    margin-top: 5px; 
 }
-button.queen {
+.words-block button {
     width: 100px;
     border: 1px solid black;
     background-color: #ccc;
     font-size: 16px;
     box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
     cursor: pointer;
-    margin-top: 10px;
+    top: 100px;
+    left: 50%;
+    transform: translate(-50%);
+    position: absolute;
 }
-button.queen:hover {
+.words-block button:hover {
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+}
+.space {
+    margin-right: 40px;
+}
+.bow {
+    position: absolute;
+    z-index: 100;
 }
 /* ============================media========================== */
 @media only screen and (max-width : 992px) {
 h2 {
     font-size: 1.75rem;
 }
-.btn {
-    width: 120px;
-    height: 30px;
-    font-size: 13px;
-    margin: 3px;
-}
-.block-button {
-    margin-top: 0;
-    margin-right: 50px;
-}
+
 @media only screen and (max-width : 768px) {
     h2 {
         font-size: 1.5rem;
     }
-    .btn {
-        width: 100px;
-        height: 26px;
-        font-size: 10px;
-    }
 }
-
-
 }

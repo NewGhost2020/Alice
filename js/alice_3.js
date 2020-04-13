@@ -38,7 +38,7 @@ function finFirst() {
     $('.fin-screen').addClass('animated');
     setTimeout(() => document.querySelector('.fin-screen').style.transform = 'scale(1)', 5000);
     $('#bottle').attr('href', 'alice_2.html');
-    $('#cake').attr('href', 'index.html');
+    $('#cake').attr('href', 'alice_4.html');
 }
 
 
