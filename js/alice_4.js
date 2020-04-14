@@ -1,5 +1,5 @@
 var wordCards = ['ALICE', 'TEATIME', 'CARD', 'CHESHIRECAT', 'CATERPILLAR', 'WATCH', 'MADHATTER', 'MUSHROOM', 'QUEEN', 'RABBIT'];
-let countCard = 0;
+let countCard = 1;
 $('.card').click(function () {
     let card = $(this).attr('data-card');
     let wordDiv = $('div[data-word ="' + card + '"]');
@@ -9,9 +9,7 @@ $('.card').click(function () {
 
 function checkWord(card, wordDiv) {
     let word = '';
-    $(wordDiv).find('input').on('mouseover', function () {
-        $(wordDiv).find('input:first').focus();
-    });
+    $(wordDiv).find('input:first').focus();
     $(wordDiv).find('input').on("keyup", function () {
         $(this).next().focus();
     });
@@ -23,9 +21,11 @@ function checkWord(card, wordDiv) {
         if (word == wordCards[card]) {
             $('.card[data-card ="' + card + '"]').find('.front').prepend('<img class="bow" src="img/bow.png" alt="bow">');
             $('.card[data-card ="' + card + '"]').off();
-            countCard++;
             if (countCard == 10) {
                 finFirst();
+            }
+            else {
+                countCard++;
             }
         }
         else {
@@ -35,6 +35,7 @@ function checkWord(card, wordDiv) {
         }
         wordDiv.hide();
         word = '';
+        $(wordDiv).find('button').off('click');
     });
 }
 
@@ -42,7 +43,6 @@ function finFirst() {
     $('#fin-cat').addClass('animated');
     $('#fin-cat').css('transform', 'scale(1)');
     $('#fin-cat').css('opacity', '0.9');
-
     setTimeout(() => document.querySelector('#fin-cat').style.opacity = '0', 3000);
     $('.fin-screen').addClass('animated');
     setTimeout(() => document.querySelector('.fin-screen').style.transform = 'scale(1)', 5000);
